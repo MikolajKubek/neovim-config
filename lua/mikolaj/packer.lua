@@ -13,11 +13,20 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use({
-        'shaunsingh/nord.nvim',
-        as = 'nord',
-        config = function()
-            vim.cmd('colorscheme nord')
+    -- use({
+    --     'shaunsingh/nord.nvim',
+    --     as = 'nord',
+    --     config = function()
+    --         vim.cmd('colorscheme nord')
+    --     end
+    -- })
+
+    use ({
+        'ellisonleao/gruvbox.nvim',
+        as = 'gruvbox',
+        config = function ()
+            vim.o.background = "dark" -- or "light" for light mode
+            vim.cmd([[colorscheme gruvbox]])
         end
     })
 
