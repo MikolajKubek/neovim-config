@@ -18,3 +18,10 @@ Plugins are managed with [Lazy](https://github.com/folke/lazy.nvim), each has it
 | telescope | `<C-p>` | fuzzy finder - git files |
 | telescope | `<leader>ps` | fuzzy finder with grep |
 | gitsigns | `<leader>hd` | diff current file |
+
+## Known issues and solutions
+### `<Esc>j` and `<Esc>k` behave as `<A-j>` and `<A-k>` when neovim runs in tmux
+I encountered this bug and found it mentioned in [LunarVim issue](https://github.com/LunarVim/LunarVim/issues/1857). The solution mentioned there is to set the escape time in `tmux.conf` file.
+```console
+set -s escape-time 0
+```
